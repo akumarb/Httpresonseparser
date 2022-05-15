@@ -83,26 +83,10 @@ public:
     {
     }
 
-    /*void set_value (const std::string& value) noexcept
-    {
-        this->value = value;
-    }*/
-
     [[nodiscard]] const std::string& get_key() const noexcept
     {
         return this->key;
     }
-
-    /*std::string serialize() const noexcept
-    {
-        std::string header;
-        header += this->key;
-        header += ": ";
-        header += this->value;
-        header += HTTP::LINE_END;
-
-        return header;
-    }*/
 
     static Header deserialize(const std::string& header)
     {
